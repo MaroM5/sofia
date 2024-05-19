@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: red;
+}
+
+#container {
+    text-align: center;
+}
+
+#startButton {
+    font-size: 24px;
+    padding: 20px;
+    background-color: purple;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+#stickmanContainer {
+    display: none;
+    position: relative;
+    height: 400px;
+}
+
+#bubble {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+#stickman {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+#head {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+#body {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 80px;
+    background-color: black;
+}
+
+#leftArm, #rightArm {
+    position: absolute;
+    top: 40px;
+    width: 50px;
+    height: 2px;
+    background-color: black;
+}
+
+#leftArm {
+    left: 50%;
+    transform: translateX(-100%);
+}
+
+#rightArm {
+    right: 50%;
+    transform: translateX(100%);
+}
+
+#leftLeg, #rightLeg {
+    position: absolute;
+    top: 120px;
+    width: 2px;
+    height: 60px;
+    background-color: black;
+}
+
+#leftLeg {
+    left: 40%;
+}
+
+#rightLeg {
+    right: 40%;
+}
+
+@keyframes backgroundChange {
+    0% { background-color: red; }
+    100% { background-color: skyblue; }
+}
+
+@keyframes confetti {
+    from { transform: translateY(-200%); }
+    to { transform: translateY(100vh); }
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: randomColor();
+    animation: confetti 3s linear infinite;
+}
