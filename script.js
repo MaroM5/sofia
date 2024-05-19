@@ -52,14 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function moveArmsDown() {
-        leftArm.style.transform = "translateX(-100%)";
-        rightArm.style.transform = "translateX(100%)";
+        leftArm.style.transform = "rotate(45deg) translateX(-100%)";
+        rightArm.style.transform = "rotate(-45deg) translateX(100%)";
     }
 
     function dab() {
         leftArm.style.transform = "rotate(-135deg) translateX(-100%)";
-        rightArm.style.transform = "rotate(135deg) translateX(100%)";
-        head.style.transform = "rotate(-45deg) translateX(-50%)";
+        rightArm.style.transform = "rotate(45deg) translateX(100%)";
+        head.style.transform = "translateX(-50%)";
     }
 
     function confetti() {
